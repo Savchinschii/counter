@@ -2,6 +2,9 @@ export type CounterPropsType = {
     display: number
     incrementHandler: () => void
     resetHandler: () => void
+    setToLocalStorageHandler: () => void
+    getFromLocalStorageHandler: () => void
+    clearLocalStorageHandler: () => void
 }
 export const Counter = (props: CounterPropsType) => {
     return (
@@ -24,6 +27,22 @@ export const Counter = (props: CounterPropsType) => {
                 >
                     reset
                 </button>
+                <button
+                    onClick={props.setToLocalStorageHandler}
+                >
+                    setToLocalStorage
+                </button>
+                <button
+                    onClick={props.getFromLocalStorageHandler}
+                >
+                    getFromLocalStorage
+                </button>
+                <button
+                    onClick={props.clearLocalStorageHandler}
+                >
+                    clearLocalStorage
+                </button>
+
             </div>
         </div>
     )
